@@ -1,0 +1,19 @@
+###
+//to test the authentication API Register user
+POST http://localhost:5000/api/profile
+Content-Type: application/json
+
+{  
+
+    "name":"open" ,
+    "price":20000,
+    "imagePath":"okonta.chris"
+   
+ }
+
+
+
+
+###
+//to get single campaign type by campainName
+GET http://localhost:5000/api/profile/mine
