@@ -47,6 +47,7 @@ const campaignSchema = require("../models/profile");
     price: req.body.price,
    imagePath: req.file.path,
   // imagePath: req.body.imagePath
+    // imagePath: req.body.imagePath
   });
   product
     .save()
