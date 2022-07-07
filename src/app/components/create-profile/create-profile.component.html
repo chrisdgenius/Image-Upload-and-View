@@ -1,0 +1,31 @@
+<h1>Create Profile</h1>
+<hr />
+<!-- declare the form and bind it to the formGroup  created in the ts. 
+  add submit button and bind to the onSubmit function in the ts
+Everything will be done on this form-->  
+<form [formGroup]="form" (submit)="onSubmit()">
+
+  <div>
+    <!-- the first input is the name which is a formControl initialised as name-->
+    <input formControlName="name" type="text" placeholder="Enter name..." />
+  </div>
+
+  <div>
+    <!-- the first input is the name which is a formControl initialised as name-->
+    <input formControlName="price" type="text" placeholder="Enter price..." />
+  </div>
+  <div>
+    <!-- The next input is of type file and it is binded to  onFileSelet declared in the ts which is an event from the DOM-->
+    <input (change)="onFileSelect($event)" type="file" />
+    
+  </div>
+  <!--If there is an imageData, display the image
+  The imageData is obtained from the selected file and a file reader will get the path and map it to the imageData
+the alt is the description of the image-->
+  <div *ngIf="imageData">
+    <img [src]="imageData" [alt]="form.value.name" />
+  </div>
+  <div>
+    <button type="submit">Create profile</button>
+  </div>
+</form>

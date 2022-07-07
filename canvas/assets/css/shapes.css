@@ -1,0 +1,6 @@
+.diamond {
+  height: 15px;
+  width: 15px;
+  background-color: #7FDBFF;
+  transform: rotate(45deg);
+} 
